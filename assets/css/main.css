@@ -927,6 +927,32 @@ section,
   position: relative; /* Ensure it stays above background pseudo-elements */
 }
 
+.carousel-container .hero-logo-product {
+  position: relative;  /* Remove absolute positioning */
+  width: 300px;        /* Set desired width */
+  height: auto;        /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the logo */
+  z-index: 3;          /* Ensure it stays above background layers */
+  object-fit: contain; /* Ensure the logo is not cropped */
+}
+
+/* Prevent the general .hero img rule from affecting this logo */
+.hero > .hero-logo-product {
+  position: relative;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Logo specific styling */
+.hero-logo-product {
+  width: 600px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 30px; /* Space between logo and the following text */
+  z-index: 3;
+  position: relative; /* Ensure it stays above background pseudo-elements */
+}
+
 .hero .carousel {
   position: relative;
   width: 100%;
